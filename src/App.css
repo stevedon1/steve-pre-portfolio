@@ -1,38 +1,241 @@
-.App {
-  text-align: center;
-}
+/* @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@0,400;1,500&display=swap'); */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+ }
+ .main-header{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 10 ;
+    width: 100%;
+    color: white;
+    /* height: 15vh;  */
+    font-family: sans-serif;
+    background-image:linear-gradient(to right, rgb(149, 37, 253),  rgb(250, 23, 23));
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+*/
   }
-}
+ 
+.logo{
+    padding-left: 12px;
+    padding-top: 12px;
+  }
+  
+  .logo h1{
+    border: 2px solid white;
+    font-weight: 800;
+    font-style: italic;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 1rem;
+  }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  .logo h1:hover{
+    border: 3px solid white;
+    cursor: pointer;
+    background-image: linear-gradient(to right,rgb(250, 23, 23), rgb(149, 37, 253));
+  }
+  .logo h1 a{
+    color: white;
+    text-decoration: none;
+  }
+ 
+  .nav-bar ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    font-size: 24px;
+    font-weight: bold;
+     padding-right: 30px;
+     padding-top: 4px;
+     padding-bottom: 4px;
+  }
+
+  .nav-bar ul li{
+    text-decoration: none;
+    padding: 4px;
+    margin: 4px;
+  }
+  .nav-bar ul li a{
+    color: white;
+    text-decoration: none;
+  }
+.nav-bar li .active{
+  text-decoration: underline;
+  font-size: 28px;
+}
+.nav-bar ul li:hover{
+    background-image: linear-gradient(to right,rgb(250, 23, 23), rgb(149, 37, 253));
+    border-radius: 8px;
+  }
+         
+  .main-body{
+    margin-top: 96px;
+  }
+  .profile-img{
+    margin: 10px;
+    
+  }
+  .profile-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+.description{
+    background-color: #d6d3d354;
+    border-radius: 6px;
+    padding: 4px;
+    margin: 10px;
+}
+.steve-name{
+    font-size: 24px;
+    font-weight: 200;
+  
+}
+.steve-name span{
+    font-weight: 700;
+    font-size: 30px;
+}
+.s-developer{
+    font-weight: lighter;
+    font-size: 20px;
+    font-style: italic;
+    padding-bottom: 8px;
+}
+.icon{
+    padding: 12px;
+    font-size: 80px;
+
+}
+.dev-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d6d3d3;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 12px;
+}
+.skill-set{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d6d3d3;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 12px;
+}
+.skill-icon-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+.skill-icons{
+    font-size: 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+
+}
+.projectList{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+.project-item{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* width: 40%; */
+  background-color: #d6d3d3;
+  border-radius: 4px;
+  margin: 4px;
+  padding: 4px;
+
+}
+.project-item:hover{
+ cursor: pointer;
+}
+.img-Container{
+  /* height: 100px; */
+}
+.img-Container img{
+  width: 100%;
+  max-height: 200%;
+}
+.project-title{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 4px;
+}
+.single-project-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.project-container{
+  width: 90%;
+  background-color: #d6d3d3;
+  margin-top: 12px;
+  border-radius: 8px;
+  padding: 8px;
+}
+.single-img-container{
+  width: 100%;
+}
+.single-img-container img{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.back-button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+
+}
+.back-button-container button{
+  padding: 12px;
+  background-image: linear-gradient(to right,rgba(250, 23, 23, 0.616), rgba(149, 37, 253, 0.644));
+  width: 150px;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.back-button-container button i{
+  padding-right: 8px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.to-github-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  background-color: #d6d3d3;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+} 
+.to-github-container i{
+  font-size: 30px;
+  margin: 12px;
 }
