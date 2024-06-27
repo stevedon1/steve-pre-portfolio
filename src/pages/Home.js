@@ -1,8 +1,10 @@
 /* eslint-disable react/style-prop-object */
 import React from "react";
 import profileImg from "../assets/dongich.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <div className="main-body">
       <div className="upper-part">
@@ -65,6 +67,15 @@ export default function Home() {
               <i className="fa-brands fa-npm" style={{ color: "#9a380e" }}></i>
               <p>EXPRESS JS</p>
             </div>
+          </div>
+          <div className="back-button-container">
+            <button
+              onClick={() => {
+                navigate("/projects");
+              }}
+            >
+              Projects<i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
         </div>
       </div>
